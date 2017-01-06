@@ -1,0 +1,23 @@
+{
+  "name": "basic-project-starter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deepak6sp/basicProjectStarter.git"
+  },
+  "author": "deepak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/deepak6sp/basicProjectStarter/issues"
+  },
+  "homepage": "https://github.com/deepak6sp/basicProjectStarter#readme",
+  "devDependencies": {
+    "browser-sync": "^2.18.6",
+    "gulp": "^3.9.1"
+  }
+}
