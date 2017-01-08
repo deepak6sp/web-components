@@ -2,27 +2,28 @@
 * @Author: deepak
 * @Date:   2017-01-06T22:56:56+11:00
 * @Last modified by:   deepak
-* @Last modified time: 2017-01-08T16:11:27+11:00
+* @Last modified time: 2017-01-08T17:34:12+11:00
 */
 
 var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
 var jasmine = require('gulp-jasmine');
+var watch = require('gulp-watch')
 
 var reports =  require("./tests_helper/jasmine_reporter.js");
 
 // Static Server + watching files
-gulp.task('serve', function() {
+gulp.task('serve',['test'], function() {
 
     browserSync.init({
         server: "./"
     });
-
-    gulp.watch("*.*").on('change', browserSync.reload);
+    gulp.watch("./components/**/*.*", ['test']);
+    gulp.watch("./components/**/*.*").on('change', browserSync.reload);
 });
 
 gulp.task('test', function(){
-    gulp.src('components/form/template-spec.js')
+    gulp.src('components/**/*-spec.js')
     .pipe(jasmine({
       reporter: reports
     }));
