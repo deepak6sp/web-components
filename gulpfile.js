@@ -2,14 +2,12 @@
 * @Author: deepak
 * @Date:   2017-01-06T22:56:56+11:00
 * @Last modified by:   deepak
-* @Last modified time: 2017-01-08T17:34:12+11:00
+* @Last modified time: 2017-01-08T19:22:30+11:00
 */
 
 var gulp        = require('gulp');
 var browserSync = require('browser-sync').create();
 var jasmine = require('gulp-jasmine');
-var watch = require('gulp-watch')
-
 var reports =  require("./tests_helper/jasmine_reporter.js");
 
 // Static Server + watching files
